@@ -1,0 +1,49 @@
+.container__home-page4 {
+    padding-top: 40px;
+    margin-bottom: 120px;
+    color: #fff;
+    background-color: var(--color-main);
+    padding-bottom: 40px;
+}
+.home-page4__box {
+}
+
+.home-page4__title {
+    grid-column: 1 / span 12;
+    grid-row: 1;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: currentColor;
+}
+.home-page4__des {
+    grid-column: 3 / span 8;
+    grid-row: 2;
+    margin-bottom: 80px;
+    color: currentColor;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+}
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+    /* home-page2 */
+
+    /* home-page1 */
+}
+@media (max-width: 767px) {
+ 
+}

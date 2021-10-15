@@ -1,0 +1,125 @@
+.footer {
+}
+.footer-layuot__wraper {
+    background-color: var(--color-main);
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.footer-layuot__box {
+    grid-row-gap: 25px;
+    grid-template-rows: auto auto;
+    
+}
+.footer__nav {
+    grid-column: 7 / span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: var(--grid-gap-col);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    grid-row: 1;
+}
+.nav__list {
+    grid-column: auto / span 3;
+}
+.nav__list.page {
+}
+.nav__list.social {
+}
+.nav-item {
+    a {
+        color: #646771;
+        font-size: 12px;
+
+        font-weight: 800;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+}
+.nav-item.title {
+    margin-bottom: 47px;
+
+    color: white;
+    font-size: 12px;
+
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.footer__authors {
+    font-size: 12px;
+    color: #fff;
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    font-weight: 400;
+    a {
+        display: inline;
+        font-weight: 800;
+        color: #fff;
+    }
+}
+.footer__related {
+    grid-column: 1 / span 4;
+    margin-right: var(--grid-gap-col-mg-lap-pc);
+}
+.footer__logo {
+}
+.footer__text {
+    color: #646771;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 27px;
+}
+.footer__social-network {
+    display: flex;
+    li{
+        padding-right: 15px;
+    }
+}
+.social-network__items {
+    
+}
+.social-network__links {
+    font-size: 20px;
+    color: #646771;
+}
+.footer__boder-bt{
+    height: 1px;
+    grid-column: 1/span 12;
+    background-color:#646771 ;
+}
+/* rps */
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+@media (min-width: 768px) and(max-width:1023px) {
+}
+@media (max-width: 767.5px) {
+    .footer__logo{
+        span{
+            display: none;
+        }
+    }
+    .footer-layuot__box {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    .footer__authors {
+        text-align: center;
+    }
+    .footer__text{
+        text-align: center;
+    }
+    .footer__logo{
+        justify-content: center;
+    }
+    .footer__social-network{
+        justify-content: center;
+    }
+}
