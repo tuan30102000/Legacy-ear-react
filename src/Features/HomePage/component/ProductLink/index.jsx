@@ -4,7 +4,7 @@ import './style.scss'
 import { Link } from 'react-router-dom';
 import tdImg from '../../../../assets/image/td.jpg'
 ProductLink.propTypes = {
-    imgSrc: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
     location:PropTypes.string,
     name:PropTypes.string,
     des1:PropTypes.string,
