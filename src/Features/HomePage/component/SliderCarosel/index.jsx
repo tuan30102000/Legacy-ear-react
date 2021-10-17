@@ -21,31 +21,28 @@ function SliderCarosel(props) {
     return (
         <div className="clip-box">
             <Slider {...settings}>
-                <div>
-                    <div className="clip"
-                        style={{ backgroundImage: 'url(' + rose1 + ')' }}>
-                        <div className="content">
-                            <h1>Post Title One</h1>
-                            <p>Lope Pham</p>
-                        </div>
+                <div className="clip">
+                    <img src={rose1} alt="" />
+                    <div className="content">
+
+                        <h1>Post Title One</h1>
+                        <p>Lope Pham</p>
                     </div>
                 </div>
-                <div>
-                    <div className="clip"
-                        style={{ backgroundImage: 'url(' + rose2 + ')' }}>
-                        <div className="content">
-                            <h1>Post Title One</h1>
-                            <p>Lope Pham</p>
-                        </div>
+                <div className="clip">
+                    <img src={rose2} alt="" />
+
+                    <div className="content">
+                        <h1>Post Title One</h1>
+                        <p>Lope Pham</p>
                     </div>
                 </div>
-                <div>
-                    <div className="clip"
-                        style={{ backgroundImage: 'url(' + rose3 + ')' }}>
-                        <div className="content">
-                            <h1>Post Title One</h1>
-                            <p>Lope Pham</p>
-                        </div>
+                <div className="clip">
+                    <img src={rose3} alt="" />
+
+                    <div className="content">
+                        <h1>Post Title One</h1>
+                        <p>Lope Pham</p>
                     </div>
                 </div>
 

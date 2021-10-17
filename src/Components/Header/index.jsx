@@ -9,7 +9,7 @@ Header.propTypes = {
 function Header(props) {
 
     const [stateMenuMobie, setstateMenuMobie] = useState(false)
-    const [scrollState, setscrollState] = useState(document.documentElement.scrollTop !== 0)
+    const [scrollState, setscrollState] = useState(document.documentElement.scrollTop === 0)
     useEffect(() => {
         document.onscroll = () => {
             // console.log(document.documentElement.scrollTop)
