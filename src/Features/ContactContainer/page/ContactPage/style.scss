@@ -1,0 +1,42 @@
+.container-contact__wraper {
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+}
+.container-contact__box {
+}
+.contact-title {
+    font-size: 48px;
+    font-weight: 600;
+    grid-column: 1 / span 12;
+    grid-row: 1;
+    margin-bottom: 80px;
+    text-transform: capitalize;
+}
+
+.contact-btn{
+    margin-left: auto;   
+}
+/*  */
+
+/* rps */
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+@media (min-width: 768px) and(max-width:1023px) {
+ 
+    .contact-title {
+        text-align: center;
+    }
+  
+}
+@media (max-width: 767.5px) {
+  
+    .contact-title {
+        text-align: center;
+    }
+  
+}
+
+/* rps */

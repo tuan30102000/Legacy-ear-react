@@ -1,0 +1,24 @@
+.category-product__wraper {
+    /* margin-top: var(--header-height);
+    height: calc(100vh - var(--header-height)); */
+    height: 100vh;
+}
+.category-product-box {
+    flex: 1;
+    display: flex;
+    height: 100%;
+}
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+}
+@media (max-width: 767px) {
+}

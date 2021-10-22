@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import gsap from 'gsap/all';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import ScrollIntoView from 'react-scroll-into-view';
 import './style.scss';
 Header.propTypes = {
 
@@ -23,7 +25,7 @@ function Header(props) {
     useEffect(() => {
         if (stateMenuMobie) {
 
-            gsap.from('.header__item', { duration: 0.8, opacity: 0, stagger: .2, }) 
+            gsap.from('.header__item', { duration: 0.8, opacity: 0, stagger: .2, })
 
         }
     }, [stateMenuMobie])
@@ -32,7 +34,7 @@ function Header(props) {
             classNames({
                 'header layuot': true,
                 'open-menu': stateMenuMobie,
-                'scroll':!scrollState
+                'scroll': !scrollState
             })
         }>
             <div className="header-box layuot-box">
@@ -41,10 +43,16 @@ function Header(props) {
                     <img className="logo-scroll-hidden" src="https://lh3.google.com/u/0/d/1wbh7KEpPP5iVW__U3mfLr5kBpQoCgKz7=w1920-h867" alt="" /><span>Legacy</span>
                 </a>
                 <ul className="header__list-link">
-                    <li className="header__item"><a href="#ciem" className="header__item-link">Our CIEM's</a></li>
+                    <li className="header__item">
+                        <ScrollIntoView selector='#ciem'>
+                            <a className="header__item-link">Our CIEM's</a>
+                        </ScrollIntoView>
+                    </li>
                     <li className="header__item"><a href="#" className="header__item-link">Works</a></li>
                     <li className="header__item"><a href="#" className="header__item-link">Artists</a></li>
-                    <li className="header__item"><a href="#" className="header__item-link">Contact</a></li>
+                    <li className="header__item"><Link className="header__item-link" to='contact'>
+                        contact
+                    </Link></li>
                 </ul>
                 <div className="navigation">
                     <div className="user-path">
