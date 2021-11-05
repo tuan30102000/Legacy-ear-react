@@ -1,3 +1,3 @@
 export const ApiUrl={
-    baseURL: '',
+    baseURL: 'http://localhost:3000/',
 }

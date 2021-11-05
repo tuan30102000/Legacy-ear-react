@@ -1,7 +1,7 @@
 import axios from "axios"
-import { ApiUrl } from "../constants/ApiUrl";
+import { ApiUrl } from "../Constants/ApiUrl";
 
-export default  axiosClient = axios.create({
+const  axiosClient = axios.create({
     baseURL: ApiUrl.baseURL,
     headers: {
         'content-Type': 'application/json',
@@ -26,3 +26,5 @@ axiosClient.interceptors.request.use(function (config) {
     // Do something with response error
     return Promise.reject(error);
   });
+
+   export default axiosClient

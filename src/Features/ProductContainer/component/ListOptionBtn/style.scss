@@ -1,4 +1,10 @@
-
+.oder__list-options-btn{
+    height: 42px;
+    display: flex;
+    & li{
+        flex: 1;
+    }
+}
 
 
 

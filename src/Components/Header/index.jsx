@@ -38,18 +38,18 @@ function Header(props) {
             })
         }>
             <div className="header-box layuot-box">
-                <a className="header__logo logo" href="/">
+                <Link to='#' className="header__logo logo">
                     <img className="logo-scroll-show" src="https://lh3.google.com/u/0/d/1HWbbV1ewKU37D52Rh5e5n8Zc6lBU495a=w1920-h867-iv1" alt="" />
                     <img className="logo-scroll-hidden" src="https://lh3.google.com/u/0/d/1wbh7KEpPP5iVW__U3mfLr5kBpQoCgKz7=w1920-h867" alt="" /><span>Legacy</span>
-                </a>
+                </Link>
                 <ul className="header__list-link">
                     <li className="header__item">
                         <ScrollIntoView selector='#ciem'>
-                            <a className="header__item-link">Our CIEM's</a>
+                            <Link to='#' className="header__item-link">Our CIEM's</Link>
                         </ScrollIntoView>
                     </li>
-                    <li className="header__item"><a href="#" className="header__item-link">Works</a></li>
-                    <li className="header__item"><a href="#" className="header__item-link">Artists</a></li>
+                    <li className="header__item"><Link to='#' className="header__item-link">Works</Link></li>
+                    <li className="header__item"><Link to='#' className="header__item-link">Artists</Link></li>
                     <li className="header__item"><Link className="header__item-link" to='contact'>
                         contact
                     </Link></li>
@@ -72,9 +72,9 @@ function Header(props) {
                     </div>
                 </div>
                 <ul className="user-nav__list-link">
-                    <li><a href>My Acount</a></li>
-                    <li><a href>Log Out</a></li>
-                    <li><a href>EN</a></li>
+                    <li><Link to='#'>My Acount</Link></li>
+                    <li><Link to='#'>Log Out</Link></li>
+                    <li><Link to='#'>EN</Link></li>
                     <li><label htmlFor="navigation__user-input">Exit <span>X</span></label></li>
                 </ul>
             </div>

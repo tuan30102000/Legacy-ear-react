@@ -1,0 +1,55 @@
+.form__auth-group{
+    border-bottom:1px solid #c7c7c7 ;
+    margin-bottom: 10px;
+    &.invalid{
+        border-bottom-color:red ;
+        .error-message{
+            color: red;
+        }
+    }
+    p{
+        text-transform: capitalize;
+        color: black;
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+}
+.input-box{
+    display: flex;
+    padding: 15px 5px;
+    i{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: #C7C7C7;
+    }
+    input{
+        border: none;
+        outline: none;
+        font-size: 15px;
+        margin-left: 5px;
+        flex: 1;
+        &::placeholder{
+            color: #C7C7C7;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+  
+}
+@media (max-width: 767px) {
+}

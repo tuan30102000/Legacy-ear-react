@@ -6,8 +6,8 @@ import './assets/scss/style.scss';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import NotFound from './Components/NotFound';
-import LoginPage from './Features/AuthenticationContainer/page/LoginPage';
-import RegisterPage from './Features/AuthenticationContainer/page/RegisterPage';
+// import LoginPage from './Features/AuthenticationContainer/page/LoginPage';
+// import RegisterPage from './Features/AuthenticationContainer/page/RegisterPage';
 import ContacContainer from './Features/ContactContainer';
 import HomeContainer from './Features/HomeContainer';
 import ProductContainer from './Features/ProductContainer';
@@ -28,8 +28,8 @@ function App() {
           <ContacContainer />
         </Route>
 
-        <Route path={'/login'} component={LoginPage} />
-        <Route path={'/register'} component={RegisterPage} />
+        {/* <Route path={'/login'} component={LoginPage} /> */}
+        {/* <Route path={'/register'} component={RegisterPage} /> */}
         <Route component={NotFound} />
       </Switch>
       <Footer />

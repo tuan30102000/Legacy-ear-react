@@ -32,7 +32,7 @@ function FormContact(props) {
     }
 
     return (
-        <form class="contact-form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             {
                 listData.map((item, index) => (
                     <InputField key={index} formState={formState} {...item} register={register} formName='contact' />

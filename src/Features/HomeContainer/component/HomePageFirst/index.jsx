@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import imgUrl from '../../../../assets/image/backgroundhomepage.JPG';
 import './style.scss';
 HomePageFirst.propTypes = {
@@ -23,7 +24,7 @@ function HomePageFirst(props) {
                     Custom In-ear Monitors
                 </h6>
                 <div className="home-page1__btn-wraper pos-rel-z1">
-                    <a href="#" className="home-page1__btn">Exlore</a>
+                    <Link to='#' className="home-page1__btn">Exlore</Link>
                 </div>
             </div>
         </div>
