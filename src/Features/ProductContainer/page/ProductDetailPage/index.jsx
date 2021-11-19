@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ListOpitonBtn from '../../component/ListOptionBtn';
-import ListOpitons from '../../component/ListOptions';
+import ListOpitons from '../../component/ListOpitonsCrical';
 import SideChoice from '../../component/SideChoice';
 import './style.scss';
+import ListOpitonsCrical from '../../component/ListOpitonsCrical';
 ProducDetailPage.propTypes = {
 
 };
@@ -60,25 +61,6 @@ function ProducDetailPage(props) {
 
         },
     }
-    const useChoice = {
-        shell: {
-            side: 1,
-            sideGeneral: 1,
-            sideDetail: [1, 1]
-
-        },
-        faceplate: {
-            side: 1,
-            sideGeneral: 1,
-            sideDetail: [1, 1],
-            type: 1,
-            solidGeneralChoice: 1,
-            tranlucentGeneralChoice: 1,
-            solidDetailChoice: [1, 1],
-            tranlucentDetailChoice: [1, 1],
-
-        }
-    }
     return (
         <div className='layuot container-detail-page1__wraper pdt-162'>
             {/* <div className='layuot-box detai-page1__box'>
@@ -87,8 +69,11 @@ function ProducDetailPage(props) {
                 )}
 
             </div> */}
-            <SideChoice >
-            </SideChoice>
+            <SideChoice name='shell'
+                Component={ListOpitonsCrical}
+                componentProp={{ listData: data.shell.value }} />
+
+
         </div>
     );
 }

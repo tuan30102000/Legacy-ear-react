@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LabelCrical from '../LabelCrical';
 import classNames from 'classnames'
 import './style.scss';
@@ -7,15 +8,16 @@ ListOpitonsCrical.propTypes = {
     className: PropTypes.bool,
     name: PropTypes.string.isRequired,
     side: PropTypes.string.isRequired,
-    currentSide: PropTypes.bool.isRequired,
+    currentside: PropTypes.bool.isRequired,
 };
 
-function ListOpitonsCrical({ listData, className = true, name, side, currentSide }) {
+function ListOpitonsCrical({ listData, currentside, name, side }) {
+    console.log(1)
     return (
-        <div className={classNames({ hide: !className })}>
+        <div className={classNames({ hide: !currentside })}>
             <ul>
                 {listData.map((item, index) => (
-                    <LabelCrical currentSide={currentSide} value={item.value} side={side} id={`${name}-${item.value}-${item.side}`} key={index} checkedState={index + 1 === 1} />
+                    <LabelCrical name={name} currentside={currentside} value={item} side={side} id={`${name}-${item.value}-${item.side}`} key={index} checkedState={index + 1 === 1} />
                 ))}
             </ul>
         </div>
