@@ -2,23 +2,24 @@ import React from 'react';
 import LabelCrical from '../LabelCrical';
 import classNames from 'classnames'
 import './style.scss';
-ListOpitons.propTypes = {
-    
+ListOpitonsCrical.propTypes = {
+    listData: PropTypes.array.isRequired,
+    className: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    side: PropTypes.string.isRequired,
+    currentSide: PropTypes.bool.isRequired,
 };
 
-function ListOpitons({className=true,name}) {
+function ListOpitonsCrical({ listData, className = true, name, side, currentSide }) {
     return (
-        <div className={classNames({hide:className})}>
-            <p>{name}</p>
+        <div className={classNames({ hide: !className })}>
             <ul>
-                <LabelCrical value='1' name={'shell'+name} side='both' checkedState={true} />
-                <LabelCrical value='2' name={'shell'+name} side='both' />
-                <LabelCrical value='5' name={'shell'+name} side='both' />
-                <LabelCrical value='3' name={'shell'+name} side='both' />
-                <LabelCrical value='4' name={'shell'+name} side='both' />
+                {listData.map((item, index) => (
+                    <LabelCrical currentSide={currentSide} value={item.value} side={side} id={`${name}-${item.value}-${item.side}`} key={index} checkedState={index + 1 === 1} />
+                ))}
             </ul>
         </div>
     );
 }
 
-export default ListOpitons;
+export default ListOpitonsCrical;

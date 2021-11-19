@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ListOpitonBtn from '../../component/ListOptionBtn';
 import ListOpitons from '../../component/ListOptions';
+import SideChoice from '../../component/SideChoice';
 import './style.scss';
 ProducDetailPage.propTypes = {
 
@@ -59,14 +60,35 @@ function ProducDetailPage(props) {
 
         },
     }
+    const useChoice = {
+        shell: {
+            side: 1,
+            sideGeneral: 1,
+            sideDetail: [1, 1]
+
+        },
+        faceplate: {
+            side: 1,
+            sideGeneral: 1,
+            sideDetail: [1, 1],
+            type: 1,
+            solidGeneralChoice: 1,
+            tranlucentGeneralChoice: 1,
+            solidDetailChoice: [1, 1],
+            tranlucentDetailChoice: [1, 1],
+
+        }
+    }
     return (
         <div className='layuot container-detail-page1__wraper pdt-162'>
-            <div className='layuot-box detai-page1__box'>
+            {/* <div className='layuot-box detai-page1__box'>
                 <ListOpitonBtn {...{ listOption, onChange: setOpition, option }} />
                 {listOption.map((item, index) => ( item === option && <ListOpitons name={item} key={index} className={false} /> )
                 )}
 
-            </div>
+            </div> */}
+            <SideChoice >
+            </SideChoice>
         </div>
     );
 }

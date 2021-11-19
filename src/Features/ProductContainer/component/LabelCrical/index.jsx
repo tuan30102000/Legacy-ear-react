@@ -4,15 +4,14 @@ import './style.scss'
 LabelCrical.propTypes = {
     value: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    side:PropTypes.string,
+    side: PropTypes.string,
+    currentSide:PropTypes.bool.isRequired,
 };
 
-function LabelCrical({ value, name, side='',checkedState=false }) {
-    const id=name + '-'+side+''+ value
-    const ref=useRef()
+function LabelCrical({ value, name, id, checkedState = false,currentSide }) {
     return (
         <li className="option-crical">
-            <input ref={ref} defaultChecked={checkedState} type="radio" id={id} value={value} name={name} />
+            <input currentSide={currentSide} defaultChecked={checkedState} type="radio" id={id} value={value} name={name} />
             <label htmlFor={id}></label>
         </li>
     );

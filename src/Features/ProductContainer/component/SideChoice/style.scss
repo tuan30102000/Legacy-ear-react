@@ -1,0 +1,39 @@
+
+.box-side{}
+.btn__side{
+    display: flex;
+    justify-content: space-around;
+    .btn-choice-side{
+        min-width: 100px;
+        padding: 7px 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-align: center;
+        border: 1px solid;
+        &.active{
+            color: #fff;
+            background-color: #000;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+}
+@media (max-width: 767px) {
+}
