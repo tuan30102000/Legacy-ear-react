@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss'
-ProductDetail.propTypes = {
+FacePlateComponent.propTypes = {
     
 };
 
-function ProductDetail(props) {
+function FacePlateComponent(data) {
+    const {name,listOpition}=data
     return (
         <div>
             
@@ -13,4 +14,4 @@ function ProductDetail(props) {
     );
 }
 
-export default ProductDetail;
+export default FacePlateComponent;

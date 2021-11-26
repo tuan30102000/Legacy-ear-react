@@ -8,10 +8,11 @@ LabelCrical.propTypes = {
     currentside:PropTypes.bool.isRequired,
 };
 
-function LabelCrical({ value, name, id, checkedState = false,currentside }) {
+function LabelCrical({ value, name, checkedState = false,currentside,side }) {
+    const id=`${name}-${side}-${value}`
     return (
         <li className="option-crical">
-            <input currentside={currentside} defaultChecked={checkedState} type="radio" id={id} value={value} name={name} />
+            <input currentside={currentside?'choose':'none'} defaultChecked={checkedState} type="radio" id={id} value={value} name={name+'-'+side} />
             <label htmlFor={id}></label>
         </li>
     );

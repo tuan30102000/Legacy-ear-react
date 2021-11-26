@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
+import DisplayComponent from '../../component/DisplayComponent';
 import ListOpitonBtn from '../../component/ListOptionBtn';
-import ListOpitons from '../../component/ListOpitonsCrical';
-import SideChoice from '../../component/SideChoice';
+import FacePlateComponent from '../../component/TypeComponents/FacePlateComponent';
+import ShellComponent from '../../component/TypeComponents/ShellComponent';
 import './style.scss';
-import ListOpitonsCrical from '../../component/ListOpitonsCrical';
 ProducDetailPage.propTypes = {
 
 };
 
 function ProducDetailPage(props) {
     const listOption = ['shell', 'faceplate', 'artwork', 'cable', 'material']
-    const [option, setOpition] = useState('shell')
+    const [option, setOpition] = useState(0)
     const data = {
         shell: {
             name: 'shell',
@@ -62,16 +62,20 @@ function ProducDetailPage(props) {
         },
     }
     return (
-        <div className='layuot container-detail-page1__wraper pdt-162'>
-            {/* <div className='layuot-box detai-page1__box'>
-                <ListOpitonBtn {...{ listOption, onChange: setOpition, option }} />
-                {listOption.map((item, index) => ( item === option && <ListOpitons name={item} key={index} className={false} /> )
-                )}
 
-            </div> */}
-            <SideChoice name='shell'
-                Component={ListOpitonsCrical}
-                componentProp={{ listData: data.shell.value }} />
+        <div className='layuot container-detail-page1__wraper pdt-162'>
+            <div className='layuot-box detai-page1__box'>
+                <ListOpitonBtn {...{ listOption, onChange: setOpition, option, itemStyle: { flex: 1 } }} />
+                <DisplayComponent showState={option === 0}>
+                    <ShellComponent data={data.shell} />
+                </DisplayComponent>
+                <DisplayComponent showState={option === 1}>
+                    <FacePlateComponent data={data.faceplate} />
+                </DisplayComponent>
+
+
+            </div>
+
 
 
         </div>

@@ -2,7 +2,7 @@ input[type="radio"] {
     display: none;
 }
 
-li.option-text{
+li.option-text {
     text-align: center;
     height: 100%;
     border: 1px solid black;
@@ -21,20 +21,32 @@ li.option-text{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.option-crical {
+    label {
+        display: block;
+        width: var(--radio-r);
+        height: var(--radio-r);
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+}
+.option-crical input[type="radio"]:checked + label {
+    border: 3px solid black;
+    width: var(--radio-checked);
+    height: var(--radio-checked);
+}
+.choice-btn{
+    min-width: 100px;
+    padding: 7px 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid black;
+    &.active{
+        color: #fff;
+        background-color: #000;
+    }
+}
 @media (min-width: 1366px) {
 }
 @media (min-width: 1024px) and(max-width:1365px) {
@@ -45,7 +57,6 @@ li.option-text{
 /* mobie up */
 /* moboe */
 @media (min-width: 768px) and(max-width:1023px) {
-  
 }
 @media (max-width: 767px) {
 }

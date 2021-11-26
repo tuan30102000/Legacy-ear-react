@@ -1,8 +1,21 @@
-.option-list-crical {
-    display: flex;
-    justify-content: space-around;
-}
 
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.display-wraper {
+    transition: 0.75s;
+    display: none;
+    animation:fadein linear 0.75s;
+
+}
+.show {
+    display: block;
+}
 
 @media (min-width: 1366px) {
 }

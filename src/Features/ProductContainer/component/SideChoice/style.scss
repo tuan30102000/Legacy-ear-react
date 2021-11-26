@@ -1,22 +1,11 @@
 
-.box-side{
+.choice-side{
     width: 100%;
 }
-.btn__side{
+.choice-side__list-btn{
     display: flex;
     justify-content: space-around;
-    .btn-choice-side{
-        min-width: 100px;
-        padding: 7px 15px;
-        font-size: 15px;
-        text-transform: uppercase;
-        text-align: center;
-        border: 1px solid;
-        &.active{
-            color: #fff;
-            background-color: #000;
-        }
-    }
+  
 }
 
 
