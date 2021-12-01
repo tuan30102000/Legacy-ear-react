@@ -5,14 +5,18 @@ LabelCrical.propTypes = {
     value: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     side: PropTypes.string,
-    currentside:PropTypes.bool.isRequired,
+    currentside: PropTypes.bool,
+    forData: PropTypes.string,
+    checkedState: PropTypes.bool,
 };
 
-function LabelCrical({ value, name, checkedState = false,currentside,side }) {
-    const id=`${name}-${side}-${value}`
+function LabelCrical({ value, name, checkedState = false, currentside = false, side, forData = '' }) {
+    const id = `${name}-${side}-${value}`
+    const forDataProp = forData ? { fordat: forData } : {}
+
     return (
         <li className="option-crical">
-            <input currentside={currentside?'choose':'none'} defaultChecked={checkedState} type="radio" id={id} value={value} name={name+'-'+side} />
+            <input {...{ ...forDataProp }} currentside={currentside ? 'choose' : 'none'} defaultChecked={checkedState} type="radio" id={id} value={value} name={name + '-' + side} />
             <label htmlFor={id}></label>
         </li>
     );

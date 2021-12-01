@@ -3,17 +3,20 @@ import PropTypes from 'prop-types';
 import './style.scss'
 import LabelText from '../Labels/ChoiceBtn';
 ListOpitonBtn.propTypes = {
-    listOption:PropTypes.array.isRequired,
-    onChange:PropTypes.func,
+    listOption:PropTypes.array.isRequired,//listOption=['text']
+    onChange:PropTypes.func.isRequired,
+    itemStyle:PropTypes.object,
+    style:PropTypes.object,
 };
 
-function ListOpitonBtn({onChange,listOption,option,itemStyle={}}) {
+function ListOpitonBtn({onChange,listOption,option,itemStyle={},style={}}) {
+   
     return (
-        <ul className="oder__list-options-btn">
+        <div className="oder__list-options-btn" style={style}>
             {listOption.map((item,index)=>(
-                <LabelText style={itemStyle}  choice={index===option} onClick={()=>{onChange(index)}} key={index}  text={item}  />
+                <LabelText style={itemStyle}   choice={index===option} onClick={()=>{onChange(index)}} key={index}  text={item}  />
             ))}
-        </ul>
+        </div>
     );
 }
 

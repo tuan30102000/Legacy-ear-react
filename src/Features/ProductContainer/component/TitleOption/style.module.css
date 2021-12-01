@@ -1,8 +1,9 @@
-.oder__list-options-btn{
-    // height: 42px;
-    display: flex;
-    justify-content: space-around;
-   
+.option-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 

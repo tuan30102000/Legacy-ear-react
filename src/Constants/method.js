@@ -55,8 +55,11 @@ const method = {
     },
     changeBoolearn(x) {
         if (x === 'true') return true
-        if (x==='false') return false
-        if (x===undefined) return undefined
+        if (x === 'false') return false
+        if (x === undefined) return undefined
+    }
+    , filterArr(arr, key) {
+        return arr.map((item,index)=>item[key])
     }
 }
 

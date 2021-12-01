@@ -38,14 +38,14 @@ function Header(props) {
             })
         }>
             <div className="header-box layuot-box">
-                <Link to='#' className="header__logo logo">
+                <Link to='/' className="header__logo logo">
                     <img className="logo-scroll-show" src="https://lh3.google.com/u/0/d/1HWbbV1ewKU37D52Rh5e5n8Zc6lBU495a=w1920-h867-iv1" alt="" />
                     <img className="logo-scroll-hidden" src="https://lh3.google.com/u/0/d/1wbh7KEpPP5iVW__U3mfLr5kBpQoCgKz7=w1920-h867" alt="" /><span>Legacy</span>
                 </Link>
                 <ul className="header__list-link">
                     <li className="header__item">
                         <ScrollIntoView selector='#ciem'>
-                            <Link to='#' className="header__item-link">Our CIEM's</Link>
+                            <Link to='/' className="header__item-link">Our CIEM's</Link>
                         </ScrollIntoView>
                     </li>
                     <li className="header__item"><Link to='#' className="header__item-link">Works</Link></li>

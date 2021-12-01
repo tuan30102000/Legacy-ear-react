@@ -1,0 +1,47 @@
+.choice-box {
+    & > .oder__list-options-btn {
+        height: unset;
+        .choice-btn{
+            padding: 3px 13px;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 15px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+}
+@media (max-width: 767px) {
+    .choice-box {
+        & > .oder__list-options-btn {
+            // display: block;
+            height: unset;
+            .choice-btn{
+                // height: 42px;
+            }
+        }
+    }
+}

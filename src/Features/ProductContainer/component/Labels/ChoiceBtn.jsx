@@ -4,7 +4,7 @@ import './style.scss'
 import classNames from 'classnames';
 ChoiceBtn.propTypes = {
     text: PropTypes.string.isRequired,
-    onClick: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
     style:PropTypes.object,
 };
 
@@ -15,7 +15,7 @@ function ChoiceBtn({ onClick, text,choice,style=null }) {
         }
     }
     return (
-        <div style={style} className={classNames('choice-btn', { active: choice })} onClick={handleClick}>{text}</div>
+        <div style={style}  className={classNames('choice-btn', { active: choice })} onClick={handleClick}>{text}</div>
     );
 }
 

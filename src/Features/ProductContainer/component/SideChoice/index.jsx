@@ -1,23 +1,25 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import DisplayComponent from '../DisplayComponent';
 import ChoiceBtn from '../Labels/ChoiceBtn';
+import OptionTitle from '../TitleOption';
 import './style.scss';
 SideChoice.propTypes = {
     Component: PropTypes.func.isRequired,
+    componentProp: PropTypes.object,
 };
 
-function SideChoice({ Component, componentProp }) {
+function SideChoice({ Component, componentProp = {} }) {
     const [choice, setchoice] = useState(false)
+    const style = {
+        // height: CSSPRO.CHOIBTN_HEIGHT,
+    }
     return (
         <div className='choice-side'>
-            <p className="option-title">
-                CONFIGURE LEFT AND RIGHT SIDE SEPARATELY
-            </p>
+            <OptionTitle content='CONFIGURE LEFT AND RIGHT SIDE SEPARATELY' />
             <div className="choice-side__list-btn">
-                <ChoiceBtn  onClick={() => setchoice(true)} text='yes' choice={choice} />
-                <ChoiceBtn  onClick={() => setchoice(false)} text='no' choice={!choice}/>
+                <ChoiceBtn onClick={() => setchoice(true)} text='yes' style={style} choice={choice} />
+                <ChoiceBtn onClick={() => setchoice(false)} text='no' style={style} choice={!choice} />
                 {/* <div className={classNames('choice-side__btn', { active: choice })} onClick={() => setchoice(true)}>Yes</div>
                 <div className={classNames('choice-side__btn', { active: !choice })} onClick={() => setchoice(false)}>No</div> */}
             </div>

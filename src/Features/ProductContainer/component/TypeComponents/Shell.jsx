@@ -3,20 +3,21 @@ import PropTypes from 'prop-types';
 import './style.scss'
 import SideChoice from '../SideChoice';
 import ListOpitonsCrical from '../ListOpitonsCrical';
-ShellComponent.propTypes = {
-
+Shell.propTypes = {
+    data: PropTypes.object.isRequired,
 };
 
-function ShellComponent({ data, }) {
+function Shell({ data, }) {
     return (
         <SideChoice
             Component={ListOpitonsCrical}
             componentProp={{
                 listData: data.value,
-                name: 'shell',
-                title: 'CHOOSE A SHELL COLOR'
+                name: data.name,
+                title: 'CHOOSE A SHELL COLOR',
+                forData:data.name,
             }} />
     );
 }
 
-export default ShellComponent;
+export default Shell;

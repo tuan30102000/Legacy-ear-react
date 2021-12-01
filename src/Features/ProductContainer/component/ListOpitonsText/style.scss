@@ -1,25 +1,9 @@
-.oder__list-options-btn{
-    // height: 42px;
+.option-list-text {
     display: flex;
     justify-content: space-around;
-   
+    label {
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 1366px) {
 }
@@ -31,7 +15,6 @@
 /* mobie up */
 /* moboe */
 @media (min-width: 768px) and(max-width:1023px) {
-  
 }
 @media (max-width: 767px) {
 }
