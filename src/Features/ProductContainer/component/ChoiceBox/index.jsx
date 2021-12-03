@@ -76,8 +76,16 @@ function ChoiceBox(props) {
         }
     }
     const handleSubmit = () => {
-        const listChoice = document.querySelectorAll('input[type=radio][currentside=choose]:checked')
-        console.log(listChoice)
+        const listChoiceElm = document.querySelectorAll('input[type=radio][currentside=choose]:checked')
+        const arrFromListChoice = Array.from(listChoiceElm)
+        const result = {}
+        arrFromListChoice.forEach((item, index) => {
+            const forData = item.getAttribute('fordata')
+            const value = item.getAttribute('value')
+            result[forData] = !Array.isArray(result[forData]) ? [] : result[forData]
+            result[forData].push(value)
+        })
+        console.log(result)
     }
     return (
         <div className='choice-box'>
@@ -92,7 +100,9 @@ function ChoiceBox(props) {
             }} />
             <AllChoice data={data} option={option} />
 
-
+            <button onClick={handleSubmit}>
+                submit
+            </button>
         </div>
     );
 }

@@ -12,7 +12,7 @@ LabelCrical.propTypes = {
 
 function LabelCrical({ value, name, checkedState = false, currentside = false, side, forData = '' }) {
     const id = `${name}-${side}-${value}`
-    const forDataProp = forData ? { fordat: forData } : {}
+    const forDataProp = forData ? { fordata: forData } : {}
 
     return (
         <li className="option-crical">

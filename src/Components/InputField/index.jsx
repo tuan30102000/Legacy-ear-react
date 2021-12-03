@@ -8,9 +8,10 @@ InputField.propTypes = {
     formName: PropTypes.string.isRequired,
     register: PropTypes.func.isRequired,
     formState: PropTypes.object.isRequired,
+    text: PropTypes.string,
 };
 
-function InputField({ name, register, formState, formName, TypeElm = 'input' }) {
+function InputField({ name, register, formState, formName, text = '', TypeElm = 'input' }) {
 
     const [inputState, setInputState] = useState(false)
     const handleInputFocus = () => setInputState(true)
@@ -26,7 +27,8 @@ function InputField({ name, register, formState, formName, TypeElm = 'input' }) 
             <div className={classNames({
                 [`${formName}-form__box form__box ${formName}-${name}`]: true,
                 active: inputState,
-                invalid: hasError
+                invalid: hasError,
+                ['textarea']: TypeElm === 'textarea'
             })}>
                 <TypeElm
                     type="text"
@@ -37,7 +39,7 @@ function InputField({ name, register, formState, formName, TypeElm = 'input' }) 
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
                 />
-                <label htmlFor={`${formName}-${name}`} className="form__label-elm">{name}</label>
+                <label htmlFor={`${formName}-${name}`} className="form__label-elm">{text ? text : name}</label>
                 <div className="input-line" />
                 {hasError && <span className="form-message" >
                     {formState.errors[name]?.message}

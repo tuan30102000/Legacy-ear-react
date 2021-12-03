@@ -1,27 +1,15 @@
 .choice-box {
+    flex: 0.7;
     & > .oder__list-options-btn {
         height: unset;
-        .choice-btn{
+        .choice-btn {
             padding: 3px 13px;
-            border: 1px solid rgba(0,0,0,0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             text-transform: uppercase;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 1366px) {
 }
@@ -39,7 +27,7 @@
         & > .oder__list-options-btn {
             // display: block;
             height: unset;
-            .choice-btn{
+            .choice-btn {
                 // height: 42px;
             }
         }
