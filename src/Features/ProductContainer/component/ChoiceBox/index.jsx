@@ -75,7 +75,7 @@ function ChoiceBox(props) {
 
         }
     }
-    const handleSubmit = () => {
+    const handleUserCheck = () => {
         const listChoiceElm = document.querySelectorAll('input[type=radio][currentside=choose]:checked')
         const arrFromListChoice = Array.from(listChoiceElm)
         const result = {}
@@ -100,8 +100,8 @@ function ChoiceBox(props) {
             }} />
             <AllChoice data={data} option={option} />
 
-            <button onClick={handleSubmit}>
-                submit
+            <button onClick={handleUserCheck}>
+               Check
             </button>
         </div>
     );

@@ -14,7 +14,6 @@ function Header(props) {
     const [scrollState, setscrollState] = useState(document.documentElement.scrollTop === 0)
     useEffect(() => {
         document.onscroll = () => {
-            // console.log(document.documentElement.scrollTop)
             setscrollState(document.documentElement.scrollTop === 0)
         }
 
@@ -45,23 +44,23 @@ function Header(props) {
                 <ul className="header__list-link">
                     <li className="header__item">
                         <ScrollIntoView selector='#ciem'>
-                            <Link to='/' className="header__item-link">Our CIEM's</Link>
+                            <Link to='/' className="header__item-link">Oder now</Link>
                         </ScrollIntoView>
                     </li>
-                    <li className="header__item"><Link to='#' className="header__item-link">Works</Link></li>
+                    <li className="header__item"><Link to='collection' className="header__item-link">Collection</Link></li>
                     <li className="header__item"><Link to='#' className="header__item-link">Artists</Link></li>
                     <li className="header__item"><Link className="header__item-link" to='contact'>
                         contact
                     </Link></li>
                 </ul>
-                <div className="navigation">
+                {/* <div className="navigation">
                     <div className="user-path">
                         <label htmlFor="navigation__user-input" className="header-link__singed  extension-icon"><i className="far fa-user-circle" aria-hidden="true" /></label>
                     </div>
-                </div>
+                </div> */}
                 <div className="header__btn-mobie show-mb" onClick={() => { setstateMenuMobie(prev => !prev) }}><span className="open"><i className="fas fa-bars" aria-hidden="true" /></span><span className="close">X</span></div>
             </div>
-            <input type="checkbox" hidden id="navigation__user-input" />
+            {/* <input type="checkbox" hidden id="navigation__user-input" />
             <label htmlFor="navigation__user-input" className="nav-over-play"> </label>
             <div className="navigatio__user-nav">
                 <div className="user-nav__box">
@@ -77,7 +76,7 @@ function Header(props) {
                     <li><Link to='#'>EN</Link></li>
                     <li><label htmlFor="navigation__user-input">Exit <span>X</span></label></li>
                 </ul>
-            </div>
+            </div> */}
         </header>
     );
 }

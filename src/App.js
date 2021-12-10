@@ -6,11 +6,8 @@ import './assets/scss/style.scss';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import NotFound from './Components/NotFound';
-// import LoginPage from './Features/AuthenticationContainer/page/LoginPage';
-// import RegisterPage from './Features/AuthenticationContainer/page/RegisterPage';
-import ContacContainer from './Features/ContactContainer';
-import HomeContainer from './Features/HomeContainer';
 import ProductContainer from './Features/ProductContainer';
+import StaticPage from './Features/StaticPage';
 
 function App() {
 
@@ -18,15 +15,16 @@ function App() {
     <div className="app">
       <Header />
       <Switch>
-        <Route exact path='/'>
-          <HomeContainer />
-        </Route>
+
         <Route path='/product'>
           <ProductContainer />
         </Route>
-        <Route path='/contact'>
-          <ContacContainer />
+        <Route path='/'>
+          <StaticPage />
         </Route>
+        {/* <Route path='/contact'>
+          <ContacContainer />
+        </Route> */}
 
         {/* <Route path={'/login'} component={LoginPage} /> */}
         {/* <Route path={'/register'} component={RegisterPage} /> */}

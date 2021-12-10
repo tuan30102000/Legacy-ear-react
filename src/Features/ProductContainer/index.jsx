@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router';
 // import ProductCategoryPage from './page/ProductCategoryPage';
-import ProducDetailPage from './page/ProductDetailPage';
+import ProductOderPage from './page/ProductOderPage';
 import './style.scss';
 ProductContainer.propTypes = {
 
@@ -16,7 +16,7 @@ function ProductContainer(props) {
                 <ProductCategoryPage />
             </Route> */}
             <Route path={Macth.path}>
-                <ProducDetailPage />
+                <ProductOderPage />
             </Route>
         </Switch>
     );

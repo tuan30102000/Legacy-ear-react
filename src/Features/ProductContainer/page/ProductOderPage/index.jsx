@@ -3,10 +3,10 @@ import ChoiceBox from '../../component/ChoiceBox';
 import FormOder from '../../component/FormOder';
 import ProductThumbnail from '../../component/ProductThumbnail';
 import './style.scss';
-ProducDetailPage.propTypes = {
+ProducOderPage.propTypes = {
 
 };
-function ProducDetailPage(props) {
+function ProducOderPage(props) {
 
     return (
         <>
@@ -26,4 +26,4 @@ function ProducDetailPage(props) {
     );
 }
 
-export default ProducDetailPage;
+export default ProducOderPage;
