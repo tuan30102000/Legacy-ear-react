@@ -6,22 +6,16 @@ import tdImg from '../../../../assets/image/td.jpg'
 ProductLink.propTypes = {
     imgSrc: PropTypes.string,
     location:PropTypes.string,
-    name:PropTypes.string,
-    des1:PropTypes.string,
-    des2:PropTypes.string,
+    title:PropTypes.string,
+
 };
 
-function ProductLink({ location='#', imgSrc=tdImg, name='craft <span>two</span> universal', des1='Two BA drivers', des2='Hear everything. Breakthrough in availability.',price }) {
+function ProductLink({ location='#', imgSrc=tdImg,title }) {
     return (
         <>
-            <Link to={location} className="product__link">
-                <img src={imgSrc} alt="" className="product__img" />
-                <div className="product__info pos-rel-z1">
-                    <h5 className="product__name" dangerouslySetInnerHTML={{__html:name}}></h5>
-                    <p className="product__des">Two BA drivers</p>
-                    <p className="product__des">Hear everything. Breakthrough in availability.</p>
-                    <p className="product__price">Starting at {price} EUR (1500 PLN)</p>
-                </div>
+            <Link to={location} className="product-link__box">
+                <img src={imgSrc} alt="" className="product-link__img" />
+                <p className="product-link__title">{title}</p>
             </Link>
         </>
     );

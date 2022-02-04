@@ -1,0 +1,76 @@
+.container-detail-page5__wraper {
+    padding: 120px 0;
+    border-bottom: 1px solid #292c331a;
+}
+.detail-page5__box {
+}
+.detail-page5__title {
+    grid-column: 1 / span 12;
+    margin-bottom: 80px;
+    font-size: 32px;
+    color: var(--color-main);
+    font-weight: 800;
+    text-align: center;
+}
+.detail-page5__card-product {
+    grid-column: 1 / span 6;
+}
+.detail-page5__list-steps {
+    grid-column: 8 / span 5;
+}
+.detail-page5__btn {
+    margin-top: 80px;
+    grid-column: 1 / span 12;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    .button-oder {
+        width: 180px;
+        height: 100%;
+        line-height: 50px;
+        align-items: center;
+        display: flex;
+        background-color: var(--color-main);
+        padding: 0 32px;
+        justify-content: space-between;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fff;
+        span {
+        }
+        i {
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+  
+}
+@media (max-width: 767px) {
+}

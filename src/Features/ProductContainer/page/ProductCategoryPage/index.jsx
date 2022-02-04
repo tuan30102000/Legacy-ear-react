@@ -11,8 +11,8 @@ function ProductCategoryPage(props) {
     return (
         <div className="category-product__wraper layuot">
             <div className="category-product-box">
-                <CategoryProductLink name='sen' src={senImg} location={'sen'}/>
-                <CategoryProductLink name='trống đồng' src={tdImg} location={'trongdong'}/>
+                <CategoryProductLink name='Sen' src={senImg} location={'sen'}/>
+                <CategoryProductLink name='Đông sơn' src={tdImg} location={'dongson'}/>
             </div>
         </div>
     );

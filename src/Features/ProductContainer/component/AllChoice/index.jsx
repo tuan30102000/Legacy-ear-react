@@ -11,7 +11,7 @@ AllChoice.propTypes = {
 };
 function AllChoice({ data,option }) {
     return (
-        <div className='all-choie' >
+        <div className='all-choice' >
             <DisplayComponent showState={option === 0}>
                 <Shell data={data.shell} />
             </DisplayComponent>

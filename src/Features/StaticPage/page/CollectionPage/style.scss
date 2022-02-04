@@ -1,8 +1,8 @@
-.container__product-title-wraper{
+.container__collection-wraper{
     margin-bottom: 130px;
 }
-.container__product-title{}
-.product-tile{
+.collection__box{}
+.collection__tile{
     font-size: 56px;
     color:var(--color-main);
     font-weight: 600;
@@ -20,7 +20,7 @@
   
 }
 @media (min-width: 768px) and(max-width:1023px) {
-    .product-wraper{
+    .item-collection__wraper{
       
       &:nth-child(2n + 1){
         grid-column: 1/span 6;

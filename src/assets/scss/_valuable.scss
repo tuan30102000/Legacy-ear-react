@@ -6,6 +6,7 @@
     --radio-r: 20px;
     --radio-checked: 25px;
     --flex-header-item: calc(1 / 3);
+
 }
 
 @media (min-width: 1366px) {
@@ -18,6 +19,7 @@
         --pd-message: 36px;
         --layout-no-pd: 1040px;
         --slide-height: 550px;
+        --mg-card:-12px;
     }
 }
 @media (min-width: 1024px) and(max-width:1365px) {
@@ -29,6 +31,7 @@
         --product-mg: 0;
         --pd-message: 36px;
         --layout-no-pd: 864px;
+        --mg-card:-12px;
         --slide-height: 500px;
     }
 }
@@ -42,6 +45,7 @@
         --pd-message: 36px;
         --layout-no-pd: 668px;
         --slide-height: 450px;
+        --mg-card:0;
     }
 }
 @media (max-width: 767.5px) {
@@ -54,5 +58,6 @@
         --pd-message: 36px;
         --slide-height: 350px;
         --layout-no-pd: calc(100% - 32px * 2);
+        --mg-card:0;
     }
 }

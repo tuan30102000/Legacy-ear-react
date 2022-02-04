@@ -1,10 +1,16 @@
 * {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     user-select: none;
     line-height: normal;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
 }
 
@@ -14,14 +20,13 @@ html {
 }
 
 a {
-   
     display: block;
     text-decoration: none;
 }
 
 p {
     font-size: 1.6rem;
-    
+
     margin: 0;
 }
 
@@ -42,4 +47,21 @@ ul {
 img {
     object-fit: cover;
     background-repeat: no-repeat;
+}
+
+//xoas
+#list {
+    ul {
+        margin-top: 80px;
+    }
+    li {
+        // margin-top: 80px;
+        height: 25vh;
+        width: 100vw;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 }

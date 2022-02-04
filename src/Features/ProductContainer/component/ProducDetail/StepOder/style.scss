@@ -1,0 +1,68 @@
+.steps {
+}
+.step__item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-column-gap: 24px;
+    margin-bottom: 24px;
+}
+.step-number {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--color-main);
+    border-radius: 50%;
+    border: 1px solid #292c331a;
+    font-weight: 600;
+}
+.step-title {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-main);
+}
+.step-content {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 12px;
+    color: #000;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+  
+}
+@media (max-width: 767px) {
+}

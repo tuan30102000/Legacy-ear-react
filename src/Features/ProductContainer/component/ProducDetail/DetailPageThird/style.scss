@@ -1,0 +1,53 @@
+.container-detail-page3__wraper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.detail-page3__box {
+}
+.detail-page3__title {
+    font-weight: 800;
+    color: var(--color-main);
+    font-size: 32px;
+    grid-column: 2 / span 4;
+    margin-left: var(--grid-gap-col-mg-lap-pc);
+}
+.detail-page3__content {
+    grid-column: 6 / span 5;
+    margin-right: var(--grid-gap-col-mg-lap-pc);
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 40px;
+    color: var(--color-main);
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+  
+}
+@media (max-width: 767px) {
+}

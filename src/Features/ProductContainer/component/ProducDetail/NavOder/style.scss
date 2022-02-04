@@ -1,0 +1,65 @@
+.nav-oder__wraper {
+    position: fixed;
+    height: 60px;
+    top: var(--header-height);
+    z-index: 10;
+    background-color: var(--oder-bg-header);
+    width: 100%;
+    border-top: 1px solid #292c331a;
+    transition: 0.8s;
+    z-index: 100;
+}
+.nav-oder__wraper.active {
+    top: calc(var(--header-height) + 174px);
+}
+.nav-oder {
+    align-items: center;
+    height: 100%;
+}
+.nav-oder__box {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292c331a;
+}
+.oder__name-product {
+    height: 100%;
+    color: #000;
+    font-size: 16px;
+    line-height: 58px;
+}
+.oder__price-product {
+    font-size: 20px;
+    color: #21252980;
+    font-weight: 800;
+    span {
+        font-size: 14px;
+        color: var(--color-main);
+    }
+}
+.oder__btn {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 98px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+}
+@media (max-width: 767px) {
+}

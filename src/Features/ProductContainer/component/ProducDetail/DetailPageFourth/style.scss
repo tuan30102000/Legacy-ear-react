@@ -1,0 +1,68 @@
+.container-detail-page4__wraper {
+    padding: 120px 0 80px 0;
+    background-color: #212529;
+}
+.detail-page4__box {
+}
+.detail-page4__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+    color: #ffffffb3;
+    grid-column: 2 / span 11;
+    margin-left: var(--grid-gap-col-mg-lap-pc);
+}
+.detail-page4__info-product {
+    margin-top: 80px;
+    grid-column: 2 / span 10;
+    margin-right: var(--grid-gap-col-mg-lap-pc);
+    margin-left: var(--grid-gap-col-mg-lap-pc);
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+.detail-page4__parameter {
+    grid-column: auto/span 1;
+    margin-bottom: 40px;
+}
+.detail-page4__specification {
+    font-size: 30px;
+    color: #fff;
+    line-height: 50px;
+}
+.detail-page4-caption {
+    color: #ffffffb3;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+  
+}
+@media (max-width: 767px) {
+}

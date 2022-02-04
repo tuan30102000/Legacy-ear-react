@@ -1,27 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss'
-ItemCollection.propTypes = {
+import { ApiUrl } from '../../../../Constants/ApiUrl';
 
+ItemCollection.propTypes = {
+    caption:PropTypes.string,
+    imgSrc:PropTypes.string,
+    faceplate:PropTypes.string,
+    color:PropTypes.string,
 };
 
-function ItemCollection({des='Craft Six',cap1='Facpelate:',cap2='Color:',src='https://www.craftears.com/remote/direct_uploads/1604160854_nlfmnfjodhcggdec2.jpeg',bold1='Brown Galaxy',bold2='Wood'}) {
+function ItemCollection({ caption = 'Craft Six', imgSrc = 'https://www.craftears.com/remote/direct_uploads/1604160854_nlfmnfjodhcggdec2.jpeg', faceplate = 'Brown Galaxy', color = 'Wood' }) {
     return (
-        <div className="product-wraper">
-            <img className="product-work__img" src={src}/>
-                <div className="product-work__info">
-                    <h4 className="product-work__des">{des}</h4>
-                    <div className="product-work__details">
-                        <div className="product-work__faceplate">
-                            <p className="product-work__cap">{cap1}</p>
-                            <p className="product-work__bold">{bold1}</p>
-                        </div>
-                        <div className="product-work__faceplate">
-                            <p className="product-work__cap">{cap2}</p>
-                            <p className="product-work__bold">{bold2}</p>
-                        </div>
+        <div className="item-collection__wraper">
+            <img className="item-collection__img" src={ApiUrl.srcStart + imgSrc} />
+            <div className="item-collection__info">
+                <h4 className="item-collection__des">{caption}</h4>
+                <div className="item-collection__details">
+                    <div className="item-collection__faceplate">
+                        <p className="item-collection__cap">FacePlate</p>
+                        <p className="item-collection__bold">{faceplate}</p>
+                    </div>
+                    <div className="item-collection__faceplate">
+                        <p className="item-collection__cap">Color:</p>
+                        <p className="item-collection__bold">{color}</p>
                     </div>
                 </div>
+            </div>
 
         </div>
     );

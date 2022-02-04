@@ -1,0 +1,35 @@
+
+.product-page__card {
+    grid-column: 1 / span 6;
+    margin-bottom: 8px;
+    &:nth-child(2n + 2) {
+        grid-column: span 6/-1;
+        margin-left:var(--mg-card);
+        margin-right: var(--grid-gap-col);
+        
+    }
+    &:nth-child(2n + 1) {
+        margin-left: var(--grid-gap-col);
+        margin-right:var(--mg-card);
+    }
+}
+
+
+
+
+
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+  
+}
+@media (max-width: 767px) {
+}

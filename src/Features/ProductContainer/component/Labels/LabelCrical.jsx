@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import './style.scss'
+import React from 'react';
+import './style.scss';
 LabelCrical.propTypes = {
     value: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
@@ -10,14 +10,14 @@ LabelCrical.propTypes = {
     checkedState: PropTypes.bool,
 };
 
-function LabelCrical({ value, name, checkedState = false, currentside = false, side, forData = '' }) {
+function LabelCrical({ value, name, checkedState = false, currentside = false, side, forData = '', color = 'transparent' }) {
     const id = `${name}-${side}-${value}`
     const forDataProp = forData ? { fordata: forData } : {}
 
     return (
         <li className="option-crical">
             <input {...{ ...forDataProp }} currentside={currentside ? 'choose' : 'none'} defaultChecked={checkedState} type="radio" id={id} value={value} name={name + '-' + side} />
-            <label htmlFor={id}></label>
+            <label style={{ backgroundColor: color }} htmlFor={id}></label>
         </li>
     );
 }

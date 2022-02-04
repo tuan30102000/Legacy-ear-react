@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useForm } from 'react-hook-form'
-import './style.scss'
-import InputField from '../../../../Components/InputField';
 import { yupResolver } from '@hookform/resolvers/yup';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import * as yup from "yup";
+import InputField from '../../../../Components/InputField';
+import './style.scss';
 
 FormOder.propTypes = {
 
@@ -17,7 +16,7 @@ const schema = yup.object().shape({
     phoneNumber: yup.number('vui long nhap so dien thoai').required('buoc phai nhap truong nay'),
     message: yup.string(),
 });
-function FormOder(props) {
+function FormOder() {
     const listData = [
         { name: 'name', TypeElm: 'input', text: '' },
         { name: 'email', TypeElm: 'input', text: '' },

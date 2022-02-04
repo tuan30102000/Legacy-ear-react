@@ -6,14 +6,14 @@ import './style.scss';
 
 CategoryProductLink.propTypes = {
     src: PropTypes.string.isRequired,
-    namep:PropTypes.string,
-    location:PropTypes.string,
+    namep: PropTypes.string,
+    location: PropTypes.string,
 };
 
-function CategoryProductLink({ location = '#', name='sen', src }) {
+function CategoryProductLink({ location = '#', name = 'sen', src }) {
     const Macth = useRouteMatch()
     return (
-        <Link to={Macth.path+'/'+location} className="category-product__link">
+        <Link to={Macth.path + '/' + location} className="category-product__link">
             <div className="category-product__link-over-play" />
             <img src={src} alt="" className="category-product__link-bg" />
             <h2>{name}</h2>

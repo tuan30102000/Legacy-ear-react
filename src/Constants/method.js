@@ -59,10 +59,25 @@ const method = {
         if (x === undefined) return undefined
     }
     , filterArr(arr, key) {
-        return arr.map((item,index)=>item[key])
+        return arr.map((item, index) => item[key])
+    },
+    checkExistsObj(obj, key) {
+        if (obj) {
+            return obj[key]
+        }
+        return
+    },
+    addStringForItemArr(arr, string) {
+        return arr.map(item => string + item)
+    }
+    , getListKeyObj(obj) {
+        const arr=[]
+        for (let key in obj) {
+            arr.push(key)
+        }
+        return arr
     }
 }
-
 // const al1=()=>{
 //     let newArr=[1,2,3,4,5]
 //     newArr[1]=3

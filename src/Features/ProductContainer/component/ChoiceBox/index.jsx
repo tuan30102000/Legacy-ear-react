@@ -4,77 +4,79 @@ import './style.scss'
 import ListOpitonBtn from '../ListOptionBtn';
 import AllChoice from '../AllChoice';
 ChoiceBox.propTypes = {
-
+    data: PropTypes.object.isRequired,
+    listOption: PropTypes.array.isRequired,
 };
+// const dataG = {
+//     shell: {
+//         name: 'shell',
+//         value: [1, 2, 3, 4]
+//     },
+//     faceplate: {
+//         name: 'faceplate',
+//         listOption: [
+//             {
+//                 name: 'solid',
+//                 value: [1, 2, 3, 4]
+//             },
+//             {
+//                 name: 'translucent',
+//                 value: [5, 6, 7, 8, 9, 10]
+//             }
+//         ]
+//     },
+//     artwork: {
+//         name: 'artwork',
+//         listOption: [
+//             {
+//                 name: 'logo-color',
+//                 value: [1, 2, 3, 4]
+//             },
+//             {
+//                 name: 'speciality',
+//                 value: [5, 6, 7, 8]
+//             }
+//         ]
+//     },
+//     cable: {
+//         name: 'cable',
+//         options: [
+//             {
+//                 name: 'SocketType',
+//                 value: [1, 2],
+//                 text: ['2-pin', 'ipx']
+//             },
+//             {
+//                 name: 'cableColor',
+//                 value: [1, 2],
+//                 text: ['white', 'black']
+//             }, {
+//                 name: 'SocketLength',
+//                 value: [1, 2],
+//                 text: ['48"', '64"']
+//             },
+//         ]
 
-function ChoiceBox(props) {
-    const listOption = ['shell', 'faceplate', 'artwork', 'cable', 'material']
+//     },
+//     material: {
+//         name: 'material',
+//         options: [
+//             {
+//                 name: 'material',
+//                 value: [1, 2, 3, 4,],
+//                 text: ['gold', 'platinum', 'dimond', 'master']
+
+//             }
+//         ]
+
+
+//     }
+// }
+// const listOptionG = ['shell', 'faceplate', 'artwork', 'cable', 'material']
+
+function ChoiceBox({ data, listOption }) {
     const [option, setOpition] = useState(0)
-    const data = {
-        shell: {
-            name: 'shell',
-            value: [1, 2, 3, 4]
-        },
-        faceplate: {
-            name: 'faceplate',
-            listOption: [
-                {
-                    name: 'solid',
-                    Value: [1, 2, 3, 4]
-                },
-                {
-                    name: 'translucent',
-                    Value: [5, 6, 7, 8, 9, 10]
-                }
-            ]
-        },
-        artwork: {
-            name: 'artwork',
-            listOption: [
-                {
-                    name: 'logo-color',
-                    Value: [1, 2, 3, 4]
-                },
-                {
-                    name: 'speciality',
-                    Value: [5, 6, 7, 8]
-                }
-            ]
-        },
-        cable: {
-            name: 'cable',
-            options: [
-                {
-                    name: 'SocketType',
-                    value: [1, 2],
-                    text: ['2-pin', 'ipx']
-                },
-                {
-                    name: 'cableColor',
-                    value: [1, 2],
-                    text: ['white', 'black']
-                }, {
-                    name: 'SocketLength',
-                    value: [1, 2],
-                    text: ['48"', '64"']
-                },
-            ]
 
-        },
-        material: {
-            name: 'material',
-            options: [
-                {
-                    name: 'material',
-                    value: [1, 2, 3, 4,],
-                    text: ['gold', 'platinum', 'dimond', 'master']
-
-                }
-            ]
-
-
-        }
-    }
     const handleUserCheck = () => {
         const listChoiceElm = document.querySelectorAll('input[type=radio][currentside=choose]:checked')
         const arrFromListChoice = Array.from(listChoiceElm)
@@ -101,7 +103,7 @@ function ChoiceBox(props) {
             <AllChoice data={data} option={option} />
 
             <button onClick={handleUserCheck}>
-               Check
+                Check
             </button>
         </div>
     );

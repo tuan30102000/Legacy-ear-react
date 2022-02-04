@@ -16,6 +16,7 @@ function Shell({ data, }) {
                 name: data.name,
                 title: 'CHOOSE A SHELL COLOR',
                 forData:data.name,
+                color:data.color,
             }} />
     );
 }

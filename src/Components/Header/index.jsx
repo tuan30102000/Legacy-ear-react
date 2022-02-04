@@ -47,9 +47,9 @@ function Header(props) {
                             <Link to='/' className="header__item-link">Oder now</Link>
                         </ScrollIntoView>
                     </li>
-                    <li className="header__item"><Link to='collection' className="header__item-link">Collection</Link></li>
-                    <li className="header__item"><Link to='#' className="header__item-link">Artists</Link></li>
-                    <li className="header__item"><Link className="header__item-link" to='contact'>
+                    <li className="header__item"><Link to='/collection' className="header__item-link">Collection</Link></li>
+                    <li className="header__item"><Link to='/product' className="header__item-link">Product</Link></li>
+                    <li className="header__item"><Link className="header__item-link" to='/contact'>
                         contact
                     </Link></li>
                 </ul>

@@ -1,0 +1,45 @@
+.container-detail-page2__wraper {
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+.detail-page2__box {
+}
+.detail-page2__title {
+    grid-column: 1 / span 12;
+    text-align: center;
+    font-size: 32px;
+    color: var(--color-main);
+    margin-bottom: 40px;
+    font-weight: 800;
+    line-height: 38px;
+    letter-spacing: 1px;
+}
+.detail-page2__des {
+    grid-column: 3 / span 8;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 80px;
+}
+.detail-page2__img-wraper {
+    height: 240px;
+    grid-column: auto/ span 6;
+}
+.detail-page2__img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+}
+@media (max-width: 767px) {
+}

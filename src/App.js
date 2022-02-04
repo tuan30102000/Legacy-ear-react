@@ -6,13 +6,17 @@ import './assets/scss/style.scss';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import NotFound from './Components/NotFound';
+import method from './Constants/method';
 import ProductContainer from './Features/ProductContainer';
 import StaticPage from './Features/StaticPage';
 
+
 function App() {
 
+console.log(method.listPaginationBtn(17, 8, 40))
   return (
-    <div className="app">
+    <div className="app ">
+     
       <Header />
       <Switch>
 

@@ -1,0 +1,45 @@
+.container-detail-page1__wraper {
+    background-color: #f7f7f7;
+}
+.detail-page1__box {
+}
+.detail-page1__title {
+    grid-row: auto;
+    grid-column: 1 / span 12;
+    text-align: center;
+    color: var(--color-main);
+    line-height: 54px;
+    font-size: 48px;
+    font-weight: 600;
+}
+.detail-page1__driver {
+    grid-row: auto;
+    grid-column: 1 / span 12;
+    text-align: center;
+    color: var(--color-main);
+    margin-top: 20px;
+    font-size: 20px;
+}
+.detail-page1__thumnail-wraper {
+    grid-column: 3 / span 8;
+    grid-row: 3;
+    height: 340px;
+}
+.detail-page1__img-thumail {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+}
+@media (max-width: 767px) {
+}

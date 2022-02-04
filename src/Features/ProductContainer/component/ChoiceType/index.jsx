@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './style.scss'
-import DisplayComponent from '../DisplayComponent';
-import ListOpitonBtn from '../ListOptionBtn';
-import ListOpitonsCrical from '../ListOpitonsCrical';
+import React, { useState } from 'react';
 import method from '../../../../Constants/method';
+import DisplayComponent from '../DisplayComponent';
+import ListOpitonsCrical from '../ListOpitonsCrical';
+import ListOpitonBtn from '../ListOptionBtn';
 import OptionTitle from '../TitleOption';
-import CSSPRO from '../../../../Constants/CSSENV';
+import './style.scss';
 ChoiceType.propTypes = {
     data: PropTypes.array,
     currentside: PropTypes.bool.isRequired,
@@ -27,7 +26,7 @@ function ChoiceType({ side, data, currentside, title = '', name, forData = '' })
             {data.map((item, i) => (
 
                 <DisplayComponent key={i} showState={currentShowIndex === i} >
-                    <ListOpitonsCrical forData={forData} currentside={currentside} currentType={currentShowIndex === i} listData={item.Value} name={name + '-' + item.name} side={side} title={title + name + '-' + item.name} />
+                    <ListOpitonsCrical forData={forData} currentside={currentside} currentType={currentShowIndex === i} color={item.color} listData={item.value} name={name + '-' + item.name} side={side} title={title + name + '-' + item.name} />
                 </DisplayComponent>
 
 
