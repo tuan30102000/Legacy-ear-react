@@ -1,3 +1,44 @@
+.loader__wraper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    background-color: #fff;
+}
+.loader__box {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    // background-color: black;
+}
+.loader__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    transform: rotate(calc(var(--value) * 45deg));
+    &::after {
+        // background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 2px solid #DA70D6;
+        // transform: scale(calc(1/var(--value)));
+        filter: hue-rotate(calc(var(--value) * 45deg));
+        animation: scaleloader 2s infinite;
+        animation-delay: calc(var(--value) * 0.125s);
+    }
+}
 
 
 

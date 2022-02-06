@@ -12,6 +12,7 @@ import useFecthDetail from '../../../../hook/useFecthDetail';
 import productApi from '../../../../api/productApi';
 import { ApiUrl } from '../../../../Constants/ApiUrl';
 import method from '../../../../Constants/method';
+import Loading from '../../../../Components/Loading';
 ProducDetailPage.propTypes = {
 
 };
@@ -19,11 +20,12 @@ ProducDetailPage.propTypes = {
 function ProducDetailPage(props) {
     const Match = useRouteMatch()
     const id = Match.params.productId
-    const { data, loadState } = useFecthDetail(productApi.getItem,id)
+    const { data, loadState } = useFecthDetail(productApi.getItem, id)
     const check = !!data._id
     if (check) {
         return (
             <>
+                {loadState && <Loading />}
                 <NavOder name={data.name} price={data.minPrice} id={id} />
                 <DetailPageFirst name={data.name} caption={method.checkExistsObj(data.caption, 0)} imgSrc={ApiUrl.srcStart + data.imgSrc} />
                 <DetailPageSecond caption={data.caption[1]} description={data.description[0]} subSrc={method.addStringForItemArr(data.subSrc, ApiUrl.srcStart)} />
@@ -35,7 +37,7 @@ function ProducDetailPage(props) {
 
         );
     }
-    return <div>404</div>
+    return <Loading />
 }
 
 export default ProducDetailPage;

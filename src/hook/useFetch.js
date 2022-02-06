@@ -9,6 +9,8 @@ export default function useFetch(callback, callbackParam) {
             try {
                 const newData = await callback(callbackParam)
                 setdata(newData)
+                setloadState(false)
+
             } catch (error) {
                 console.log(error)
             }

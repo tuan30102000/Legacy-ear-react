@@ -17,7 +17,6 @@ ListOpitonsCrical.propTypes = {
 };
 
 function ListOpitonsCrical({ listData, forData = '', color=['transparent','transparent','transparent','transparent','transparent','transparent','transparent','transparent'], currentside, name, side, currentType = true, title = 'Choose your option' }) {
-    console.log(Array.isArray(color))
     return (
         <div className={classNames('list-options-crical__box',)}>
             <OptionTitle content={(side ? side + '-' : '') + title} />

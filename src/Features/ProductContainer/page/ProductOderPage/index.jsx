@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import productApi from '../../../../api/productApi';
+import Loading from '../../../../Components/Loading';
 import { ApiUrl } from '../../../../Constants/ApiUrl';
 import method from '../../../../Constants/method';
 import useFecthDetail from '../../../../hook/useFecthDetail';
@@ -36,7 +37,7 @@ function ProducOderPage() {
             </>)
         );
     }
-    return <p>Not Found</p>
+    return <Loading />
 }
 
 export default ProducOderPage;
