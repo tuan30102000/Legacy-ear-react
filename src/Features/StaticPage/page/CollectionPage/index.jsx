@@ -23,7 +23,7 @@ function CollectionPage(props) {
             }
         }
         getCollection()
-    }, [queryParam])
+    }, [queryParam.page])
     useEffect(() => {
         const list = document.querySelector('.container__collection-wraper')
         const body = document.getElementById('root')

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './style.scss'
 import ProductCard from '../ProductCard';
 ProductList.propTypes = {
-    data: PropTypes.object,
+    data: PropTypes.array,
 };
 
 function ProductList({ data }) {
