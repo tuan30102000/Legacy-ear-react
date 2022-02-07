@@ -64,6 +64,7 @@
 
     }
     .header__item {
+    
     }
     // .navigation {
     //     .user-path {
@@ -283,6 +284,7 @@
     display: inline;
 }
 @media (max-width: 767.5px) {
+
     .header {
         transition: 0.5s;
     }
@@ -302,8 +304,11 @@
         left: 0;
         right: 0;
         top: 100%;
-        background-color: #fff;
+        // background-color: #fff;
         transition: 1s;
+    }
+    .header__item {
+        background-color: #fff;
     }
     .header__item-link {
         line-height: 44px;

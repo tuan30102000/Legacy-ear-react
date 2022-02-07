@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 // import PropTypes from 'prop-types';
 import './style.scss'
 import ItemCollection from '../../component/ItemCollection';
@@ -9,20 +9,39 @@ function CollectionPage(props) {
     const [dataCollection, setdataCollection] = useState([])
     const [queryParam, setqueryParam] = useState({
         page: 1,
-        limit: 2,
+        limit: 4,
     })
-    useEffect(() => {
-        const getCollection = async () => {
-            // console.log(queryParam)
-            try {
-                let data = await collectionApi.getAll(queryParam)
-                const newData = Array.from(dataCollection.concat(data.docs))
-                setdataCollection(newData)
-            } catch (error) {
-                console.log(error)
-            }
+    // const handleCall = useCallback(
+    //     () => {
+    //         (async () => {
+    //             console.log(queryParam)
+    //             try {
+    //                 let data = await collectionApi.getAll(queryParam)
+    //                 const newData = Array.from(dataCollection.concat(data.docs))
+    //                 setdataCollection(newData)
+    //                 console.log(1)
+    //             } catch (error) {
+    //                 console.log(error)
+    //             }
+    //         }
+    //         )()
+    //     },
+    //     [queryParam],
+    // )
+    // const newData = Array.from(dataCollection.concat(data.docs))
+    // setdataCollection(newData)
+    // useEffect(() => {
+    //   handleCall()
+    // }, [queryParam])
+    useMemo(async () => {
+        try {
+            let data = await collectionApi.getAll(queryParam)
+            const newData = Array.from(dataCollection.concat(data.docs))
+            setdataCollection(newData)
+            console.log(queryParam)
+        } catch (error) {
+            console.log(error)
         }
-        getCollection()
     }, [queryParam])
     useEffect(() => {
         const list = document.querySelector('.container__collection-wraper')
@@ -32,7 +51,7 @@ function CollectionPage(props) {
             const listHeight = list.offsetHeight
             const marginTop = list.offsetTop
             const mgBottom = body.offsetHeight - listHeight - marginTop
-            const checkDk = body.offsetHeight - window.innerHeight - mgBottom < document.documentElement.scrollTop
+            const checkDk = body.offsetHeight - window.innerHeight - mgBottom-10 < document.documentElement.scrollTop
             // console.log(body.offsetHeight - window.innerHeight, document.documentElement.scrollTop,body.offsetHeight - window.innerHeight - 3 -listHeight-marginTop)
             // console.log('footer cong thuc' + (body.offsetHeight - listHeight - marginTop), 'footer :' + footer.offsetHeight)
             if (checkDk) {
@@ -45,6 +64,7 @@ function CollectionPage(props) {
             }
         }
         return () => {
+            document.onscroll=null
         }
     }, [dataCollection])
 

@@ -11,14 +11,14 @@ SliderCarosel.propTypes = {
 const listImgSlide = [rose1, rose2, rose3]
 function SliderCarosel(props) {
     const settings = {
-        settings:'unslick'
-        // className: "center",
-        // centerMode: true,
-        // infinite: true,
-        // centerPadding: "100px",
-        // slidesToShow: 2,
-        // speed: 500,
-        // beforeChange:(crr,next)=>setImgIndex(next),
+        settings:'unslick',
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        centerPadding: "100px",
+        slidesToShow: 2,
+        speed: 500,
+        beforeChange:(crr,next)=>setImgIndex(next),
     };
 
     const [imgIndex, setImgIndex] = useState(0)
