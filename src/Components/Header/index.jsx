@@ -13,7 +13,7 @@ Header.propTypes = {
 
 function Header(props) {
     const isMobile = useMediaQuery({
-        query: '(min-width: 1224px)'
+        query: '(max-width: 757.5px)'
     })
     const [stateMenuMobie, setstateMenuMobie] = useState(false)
     const [scrollState, setscrollState] = useState(document.documentElement.scrollTop === 0)
@@ -59,7 +59,7 @@ function Header(props) {
                         contact
                     </Link></li>
                 </ul>
-                {/* <div className="header__btn-mobie show-mb" onClick={() => { setstateMenuMobie(prev => !prev) }}><span className="open"><i className="fas fa-bars" aria-hidden="true" /></span><span className="close">X</span></div> */}
+                {isMobile && <div className="header__btn-mobie show-mb" onClick={() => { setstateMenuMobie(prev => !prev) }}><span className="open"><i className="fas fa-bars" aria-hidden="true" /></span><span className="close">X</span></div>}
             </div>
         </header>
     );
