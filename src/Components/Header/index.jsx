@@ -2,13 +2,72 @@ import classNames from 'classnames';
 import gsap from 'gsap/all';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import logoBlack from '../../assets/image/logoblack.png'
+import logoWhite from '../../assets/image/logowhite.png'
 import ScrollIntoView from 'react-scroll-into-view';
+import { useMediaQuery } from 'react-responsive'
 import './style.scss';
 Header.propTypes = {
 
 };
 
 function Header(props) {
+    const isMobile = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+    const [stateMenuMobie, setstateMenuMobie] = useState(false)
+    const [scrollState, setscrollState] = useState(document.documentElement.scrollTop === 0)
+    useEffect(() => {
+        const onScroll = () => {
+            setscrollState(document.documentElement.scrollTop === 0)
+        }
+        document.addEventListener('scroll', onScroll)
+
+        return () => {
+            document.removeEventListener('scroll', onScroll)
+        }
+    }, [])
+    useEffect(() => {
+        if (stateMenuMobie) {
+
+            gsap.from('.header__item', { duration: 0.8, opacity: 0, stagger: .2, })
+
+        }
+    }, [stateMenuMobie])
+    return (
+        <header className={
+            classNames({
+                'header layuot': true,
+                'open-menu': stateMenuMobie,
+                'scroll': !scrollState
+            })
+        }>
+            <div className="header-box layuot-box">
+                <Link to='/' className="header__logo logo">
+                    <img className="logo-scroll-show" src={logoBlack} alt="" />
+                    <img className="logo-scroll-hidden" src={logoWhite} alt="" /><span>Legacy</span>
+                </Link>
+                <ul className="header__list-link">
+                    <li className="header__item">
+                        <ScrollIntoView selector='#ciem'>
+                            <Link to='/' className="header__item-link">Oder now</Link>
+                        </ScrollIntoView>
+                    </li>
+                    <li className="header__item"><Link to='/collection' className="header__item-link">Collection</Link></li>
+                    <li className="header__item"><Link to='/product' className="header__item-link">Product</Link></li>
+                    <li className="header__item"><Link className="header__item-link" to='/contact'>
+                        contact
+                    </Link></li>
+                </ul>
+                {/* <div className="header__btn-mobie show-mb" onClick={() => { setstateMenuMobie(prev => !prev) }}><span className="open"><i className="fas fa-bars" aria-hidden="true" /></span><span className="close">X</span></div> */}
+            </div>
+        </header>
+    );
+}
+
+
+
+function HeaderCurrent() {
 
     const [stateMenuMobie, setstateMenuMobie] = useState(false)
     const [scrollState, setscrollState] = useState(document.documentElement.scrollTop === 0)
