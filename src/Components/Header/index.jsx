@@ -7,13 +7,14 @@ import logoWhite from '../../assets/image/logowhite.png'
 import ScrollIntoView from 'react-scroll-into-view';
 import { useMediaQuery } from 'react-responsive'
 import './style.scss';
+import { useLocation } from 'react-router-dom';
 Header.propTypes = {
 
 };
 
-function Header(props) {
+function Header() {
     const isMobile = useMediaQuery({
-        query: '(max-width: 757.5px)'
+        query: '(max-width:757.5px)'
     })
     const [stateMenuMobie, setstateMenuMobie] = useState(false)
     const [scrollState, setscrollState] = useState(document.documentElement.scrollTop === 0)
@@ -22,7 +23,6 @@ function Header(props) {
             setscrollState(document.documentElement.scrollTop === 0)
         }
         document.addEventListener('scroll', onScroll)
-
         return () => {
             document.removeEventListener('scroll', onScroll)
         }
@@ -39,13 +39,14 @@ function Header(props) {
             classNames({
                 'header layuot': true,
                 'open-menu': stateMenuMobie,
-                'scroll': !scrollState
+                'scroll': !scrollState,
             })
         }>
             <div className="header-box layuot-box">
                 <Link to='/' className="header__logo logo">
-                    <img className="logo-scroll-show" src={logoBlack} alt="" />
-                    <img className="logo-scroll-hidden" src={logoWhite} alt="" /><span>Legacy</span>
+                    {!scrollState && <img className="logo-scroll-show" src={logoBlack} alt="" />}
+                    {scrollState && <img className="" src={logoWhite} alt="" />}
+                    <span>Legacy</span>
                 </Link>
                 <ul className="header__list-link">
                     <li className="header__item">
@@ -59,7 +60,12 @@ function Header(props) {
                         contact
                     </Link></li>
                 </ul>
-                {isMobile && <div className="header__btn-mobie show-mb" onClick={() => { setstateMenuMobie(prev => !prev) }}><span className="open"><i className="fas fa-bars" aria-hidden="true" /></span><span className="close">X</span></div>}
+                {isMobile &&
+                    <div className="header__btn-mobie" onClick={() => { setstateMenuMobie(prev => !prev) }}>
+                        {!stateMenuMobie && <span className="open"><i className="fas fa-bars" aria-hidden="true" /></span>}
+                        {stateMenuMobie && <span className="close">X</span>}
+                    </div>
+                }
             </div>
         </header>
     );

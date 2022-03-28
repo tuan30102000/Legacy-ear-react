@@ -2,34 +2,116 @@
     height: var(--header-height);
     position: fixed;
     z-index: 999999999;
-    background-color: #fff;
+    background-color: transparent;
     width: 100%;
+    transition: 0.5s;
+}
+.header.scroll:not(.relative) {
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0 12px 32px 0 rgba(33, 37, 41, 0.06);
+    .header__logo {
+        span {
+            color: #000;
+        }
+    }
+    .header__list-link {
+        li {
+        }
+        a {
+            color: #21252980;
+            transition: 0.25s;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
 }
 .header-box {
     display: flex;
-    span {
-        color: black;
-    }
 }
 .header__logo {
-    flex: 0.15;
+    .logo-scroll-hidden {
+        // filter: hue-rotate(180deg);
+    }
     .logo-scroll-hidden {
         display: none;
- 
+    }
+    span {
+        color: #fff;
     }
 }
 .header__list-link {
-    justify-content: space-evenly;
-    flex: 0.7;
-    display: flex;
     li {
         display: flex;
         align-items: center;
     }
     a {
         font-size: 12px;
-        color: #21252980;
+        color: #fff;
         line-height: 15px;
         font-weight: 800;
+        text-transform: capitalize;
+    }
+}
+
+@media (min-width: 1366px) {
+}
+@media (min-width: 1024px) {
+    .header__logo {
+        flex: 0.3333;
+    }
+    .header__list-link {
+        justify-content: space-between;
+        flex: 0.33333;
+    }
+}
+@media (min-width: 1024px) and(max-width:1365px) {
+}
+/* mobie up */
+@media (min-width: 768px) {
+    .header__list-link {
+        display: flex;
+    }
+}
+/* mobie up */
+/* moboe */
+@media (min-width: 768px) and(max-width:1023px) {
+    .header__logo {
+        flex: 0.3333;
+    }
+    .header__list-link {
+        justify-content: center;
+        flex: 0.5;
+    }
+}
+//mobie
+@media (max-width: 767px) {
+    .header-box{
+        justify-content: space-between;
+    }
+    .header__btn-mobie{
+        display: flex;
+        align-items: center;
+    }
+    .header__list-link {
+        display: none;
+    }
+    .header.open-menu {
+        .header__list-link {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            li {
+                display: block;
+                background-color: #fff;
+            }
+            a {
+                text-align: center;
+                line-height: 44px;
+            }
+        }
     }
 }

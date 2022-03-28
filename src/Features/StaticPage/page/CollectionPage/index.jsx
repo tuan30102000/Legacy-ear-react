@@ -27,7 +27,8 @@ function CollectionPage(props) {
     useEffect(() => {
         const list = document.querySelector('.container__collection-wraper')
         const body = document.getElementById('root')
-        document.onscroll = () => {
+
+        const onscroll = () => {
             // console.log(document.documentElement.scrollTop, list.offsetTop, list.clientHeight, window.innerHeight, body.offsetHeight)
             const listHeight = list.offsetHeight
             const marginTop = list.offsetTop
@@ -44,7 +45,9 @@ function CollectionPage(props) {
 
             }
         }
+        document.addEventListener('scroll', onscroll)
         return () => {
+            document.removeEventListener('scroll', onscroll)
         }
     }, [dataCollection])
 
