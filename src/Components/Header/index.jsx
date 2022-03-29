@@ -44,8 +44,7 @@ function Header() {
         }>
             <div className="header-box layuot-box">
                 <Link to='/' className="header__logo logo">
-                    {!scrollState && <img className="logo-scroll-show" src={logoBlack} alt="" />}
-                    {scrollState && <img className="" src={logoWhite} alt="" />}
+                    <img className="" src={scrollState ? logoWhite : logoBlack} alt="" />
                     <span>Legacy</span>
                 </Link>
                 <ul className="header__list-link">
