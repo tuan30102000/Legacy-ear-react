@@ -12,7 +12,7 @@ function CollectionPage(props) {
         limit: 2,
     })
     useEffect(() => {
-        const isMount = true
+        let isMount = true
         const getCollection = async () => {
             // console.log(queryParam)
             try {
