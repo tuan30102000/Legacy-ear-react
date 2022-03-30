@@ -55,6 +55,15 @@ function Header({ isRelative = false, canNotResize = false, backgroundColor = ''
             document.removeEventListener('scroll', onScroll)
         }
     }, [])
+    const closeMenu = () => {
+        setstateMenuMobie(false)
+    }
+    const scrollIntoView = () => {
+        if (isHome) {
+            const elmScroll = document.getElementById('ciem')
+            elmScroll && elmScroll.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+        }
+    }
     useEffect(() => {
         if (stateMenuMobie) {
 
@@ -62,6 +71,7 @@ function Header({ isRelative = false, canNotResize = false, backgroundColor = ''
 
         }
     }, [stateMenuMobie])
+
     return (
         <header className={
             classNames({
@@ -80,15 +90,15 @@ function Header({ isRelative = false, canNotResize = false, backgroundColor = ''
                     <span>Legacy</span>
                 </Link>
                 <ul className="header__list-link">
-                    <li className="header__item">
-                        {isHome && <ScrollIntoView selector='#ciem'>
-                            <Link to='/' className="header__item-link">Oder now</Link>
-                        </ScrollIntoView>}
-                        {!isHome && <Link to='/' className="header__item-link">Oder now</Link>}
+                    <li onClick={() => {
+                        closeMenu()
+                        scrollIntoView()
+                    }} className="header__item">
+                        <Link to='/' className="header__item-link">Oder now</Link>
                     </li>
-                    <li className="header__item"><Link to='/collection' className="header__item-link">Collection</Link></li>
-                    <li className="header__item"><Link to='/product' className="header__item-link">Product</Link></li>
-                    <li className="header__item"><Link className="header__item-link" to='/contact'>
+                    <li onClick={closeMenu} className="header__item"><Link to='/collection' className="header__item-link">Collection</Link></li>
+                    <li onClick={closeMenu} className="header__item"><Link to='/product' className="header__item-link">Product</Link></li>
+                    <li onClick={closeMenu} className="header__item"><Link className="header__item-link" to='/contact'>
                         contact
                     </Link></li>
                 </ul>
