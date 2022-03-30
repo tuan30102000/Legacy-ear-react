@@ -12,17 +12,21 @@ function CollectionPage(props) {
         limit: 2,
     })
     useEffect(() => {
+        const isMount = true
         const getCollection = async () => {
             // console.log(queryParam)
             try {
                 let data = await collectionApi.getAll(queryParam)
                 const newData = Array.from(dataCollection.concat(data.docs))
-                setdataCollection(newData)
+                if (isMount) {
+                    setdataCollection(newData)
+                }
             } catch (error) {
                 console.log(error)
             }
         }
         getCollection()
+        return () => isMount = false
     }, [queryParam.page])
     useEffect(() => {
         const list = document.querySelector('.container__collection-wraper')

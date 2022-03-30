@@ -14,7 +14,7 @@ function HomePageSecond(props) {
             <div className="home-page2__box">
                 {/* <div className="home-page2__product"> */}
 
-                <ProductLink location='your-custom' title='Your custom' />
+                <ProductLink location='/contact' title='Your custom' />
                 {/* </div> */}
                 {/* <div className="home-page2__product"> */}
                 <ProductLink location='/product' title='My custom' />

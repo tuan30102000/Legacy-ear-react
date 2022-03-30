@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import './assets/font-awesome-pro-master/font-awesome-pro-master/font-awesome-pro-master/css/all.css';
 import './assets/scss/style.scss';
 import Footer from './Components/Footer';
-import Header from './Components/Header';
+import HeaderPage from './Components/Header';
 import NotFound from './Components/NotFound';
 import method from './Constants/method';
 import ProductContainer from './Features/ProductContainer';
@@ -13,13 +13,11 @@ import StaticPage from './Features/StaticPage';
 
 function App() {
 
-console.log(method.listPaginationBtn(17, 8, 40))
+  console.log(method.listPaginationBtn(17, 8, 40))
   return (
     <div className="app ">
-     
-      <Header />
+      <HeaderPage />
       <Switch>
-
         <Route path='/product'>
           <ProductContainer />
         </Route>

@@ -3,7 +3,6 @@
     // padding-bottom: 80px;
     padding-top: 180px;
     margin-bottom: 80px;
-
 }
 .home-page2__box {
     display: flex;
@@ -42,10 +41,14 @@
         padding-top: 120px;
     }
     /* home-page2 */
-
 }
 @media (max-width: 767px) {
-  
+    .home-page2__box {
+        height: 600px;
+        flex-direction: column;
+        .product-link__box{
+        }
+    }
     // .home-page2__product {
     //     &:nth-child(2n + 1) {
     //         margin-left: 0px;
